@@ -1,5 +1,5 @@
 # Oncology-Clicinal-Trials---Types-nad-Sites
-Which cancer types are most frequently investigated in clinical trials?  How has the number of oncology clinical trials evolved over time? The report is designed to provide an accessible overview of oncology research activity and highlight geographical and temporal patterns.
+What are the most heavily researched cancer types in clinical studies? And where? The report is designed to provide an accessible overview of oncology research activity and highlight geographical and temporal patterns.
 
 ## 1. Project Overview
 
@@ -73,10 +73,28 @@ Transformation steps:
 1. Import `interventions.txt`.
 2. Promote headers and enforce appropriate data types.
 3. Join with `oncology_only_nct_id`.
-4. Remove free-text description fields.
 
 **Result:** Structured intervention data associated with oncology-related clinical trials.
 
+### 3.4 Sponsors Table
+
+Transformation steps:
+
+1. Import `sponsors.txt`.
+2. Promote headers and enforce appropriate data types.
+3. Join with `oncology_only_nct_id`.
+
+**Result:** Structured sponsor data associated with oncology-related clinical trials, including lead institute.
+
+### 3.5 Countries
+
+Transformation steps:
+
+1. Import `countries.txt`.
+2. Promote headers and enforce appropriate data types.
+3. Join with `oncology_only_nct_id`.
+
+**Result:** Structured countries data associated with oncology-related clinical trials.
 ---
 
 ## 4. Data Model
@@ -85,9 +103,8 @@ The Power BI dataset uses a relational data model.
 
 - **Model type:** Relational
 - **Primary identifier:** `nct_id`
-- **Core tables:**
+- **Core table:**
   - `studies`
-  - `interventions`
 
 Single-direction relationships are used to maintain predictable filter propagation and model stability.
 
@@ -101,7 +118,7 @@ The following sections summarize the main insights identified in the Power BI re
 
 ### 5.1 Clinical Trials by Cancer Type
 
-**[INSERT FIGURE 1 – Number of Clinical Studies per Cancer Type]**
+<img width="480" height="349" alt="image" src="https://github.com/user-attachments/assets/bd3d073f-8095-4641-8027-9a9dfa79a9c3" />
 
 *Figure 1. Distribution of oncology clinical trials by cancer type.*
 
@@ -109,7 +126,6 @@ Breast cancer represents the most frequently investigated cancer type, with appr
 
 The next most frequently represented cancer types are:
 
-- **Breast cancer:** 8,900 trials
 - **Prostate cancer:** 4,440 trials
 - **Colorectal cancer:** 3,505 trials
 
@@ -117,7 +133,7 @@ These results indicate a substantial concentration of oncology research activity
 
 ### 5.2 Clinical Trials Over Time
 
-**[INSERT FIGURE 2 – Number of Clinical Studies by Start Year]**
+<img width="474" height="358" alt="image" src="https://github.com/user-attachments/assets/d2c07440-8ae6-4822-b967-0598be63d2d1" />
 
 *Figure 2. Temporal development of oncology clinical trials based on study start date.*
 
@@ -142,7 +158,7 @@ Similarly, the 2025 figure may be affected by reporting delays and incomplete da
 
 ### 5.3 Geographical Distribution of Clinical Trials
 
-**[INSERT FIGURE 3 – Number of Clinical Trials by Country]**
+<img width="506" height="382" alt="image" src="https://github.com/user-attachments/assets/f11a80fa-0d0e-4479-be87-ed4e2576a9e9" />
 
 *Figure 3. Geographical distribution of oncology clinical trials by country.*
 
@@ -154,7 +170,7 @@ This substantial difference highlights the leading position of the United States
 
 ### 5.4 Leading Clinical Trial Sites
 
-**[INSERT FIGURE 4 – Top 6 Clinical Trial Sites]**
+<img width="474" height="376" alt="image" src="https://github.com/user-attachments/assets/d4c786d7-0bda-432b-a7fb-3bc7a2fcdd9e" />
 
 *Figure 4. Six most frequently represented clinical trial sites in the dataset.*
 
@@ -162,7 +178,7 @@ The analysis of the six leading clinical trial sites reveals a strong representa
 
 Key observations:
 
-- US institutions occupy three of the top six positions, including ranks 1, 2, and 6.
+- US institutions occupy three of the top six positions, including ranks 1, 2, 3 and 6.
 - Chinese universities occupy the third and fourth positions.
 - This distribution demonstrates the prominent role of major academic and research institutions in oncology clinical research.
 
@@ -173,13 +189,13 @@ Key observations:
 Several methodological considerations should be taken into account when interpreting the results:
 
 - **Keyword-based identification:** Oncology studies are identified using a predefined list of keywords in the `downcase_mesh_term` field. This may result in both false positives and false negatives.
-- **Condition classification:** The analysis relies on the condition terminology available in AACT and does not include independent clinical validation of each study.
+- **Condition classification:** The analysis relies on the condition table terminology available in AACT and does not include independent clinical validation of each study.
 - **Country attribution:** Clinical trials may involve multiple countries and locations. Country-level counts therefore depend on how study locations are represented and aggregated.
 - **Site attribution:** A single clinical trial may involve multiple sites. Site-level counts reflect the representation of facilities in the source data and should not necessarily be interpreted as the number of unique trials conducted exclusively at a given institution.
 - **Recent-year data:** The most recent years may be affected by incomplete reporting, registration delays, and ongoing updates to ClinicalTrials.gov records.
 - **Study start date:** Temporal trends are based on the recorded study start date rather than the registration or publication date.
 
-The results should be interpreted as an exploratory overview of registered oncology clinical research rather than a comprehensive measure of all oncology research activity worldwide.
+The results should be interpreted as an **exploratory overview** of registered oncology clinical research rather than a comprehensive measure of all oncology research activity worldwide.
 
 ---
 
@@ -187,8 +203,6 @@ The results should be interpreted as an exploratory overview of registered oncol
 
 This Power BI project provides an exploratory overview of the global oncology clinical trial landscape.
 
-The analysis identifies breast cancer as the most frequently investigated cancer type, highlights the United States and China as the leading countries by trial representation, and reveals changes in the number of registered oncology studies over time.
-
-The geographical analysis also demonstrates the prominent role of major US and Chinese research institutions.
+The analysis identifies breast cancer as the most frequently investigated cancer type, highlights the United States and China as the leading countries by trial representation, and reveals changes in the number of registered oncology studies over time, with main peaks in 2008 and 2024.
 
 Overall, the report offers a structured view of oncology clinical research activity and provides a foundation for further analysis of therapeutic areas, geographical patterns, and research trends.
