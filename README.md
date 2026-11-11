@@ -1,4 +1,5 @@
-# Oncology-Clicinal-Trials---Types-nad-Sites
+# Series: The Cancer Equation, Needs and Research, Do They Meet? 
+# Part 1/3 Oncology Clicinal Trials Types nad Sites
 What are the most heavily researched cancer types in clinical studies? And where? The report is designed to provide an accessible overview of oncology research activity and highlight geographical and temporal patterns.
 
 ## 1. Project Overview
@@ -187,9 +188,10 @@ Key observations:
 
 ## 7. Validation
 
-In order to validate at least some outcomes of this exploratory study, the comparison with the published data was executed. Phesi’s annual “world’s most studied diseases” report, published 8 January 2026 and covering 2025, analyzed all recruiting clinical trials for all diseases, and breast cancer was the most studied disease for the fifth year running. This fiinding consistent with result of this study.
+In order to validate at least some outcomes of this exploratory study, the comparison with the published data was executed. Phesi’s annual “world’s most studied diseases” report, published 8 January 2026 and covering 2025, analyzed all recruiting clinical trials for all diseases, and breast cancer was the most studied disease for the fifth year running. This finding consistent with result of this study.
 
 https://www.manufacturingchemist.com/breast-cancer-world-s-most-studied-disease-phesi
+
 
 ---
 
@@ -217,3 +219,5 @@ This Power BI project provides an exploratory overview of the global oncology cl
 The analysis identifies breast cancer as the most frequently investigated cancer type, highlights the United States and China as the leading countries by trial representation, and reveals changes in the number of registered oncology studies over time, with main peaks in 2008 and 2024.
 
 Overall, the report offers a structured view of oncology clinical research activity and provides a foundation for further analysis of therapeutic areas, geographical patterns, and research trends.
+
+In the next part of the series, we will see if the clinical trial efforts match the real patient needs.
