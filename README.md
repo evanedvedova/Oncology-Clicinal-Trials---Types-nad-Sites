@@ -158,7 +158,7 @@ Similarly, the 2025 figure may be affected by reporting delays and incomplete da
 
 ### 5.3 Geographical Distribution of Clinical Trials
 
-<img width="506" height="382" alt="image" src="https://github.com/user-attachments/assets/f11a80fa-0d0e-4479-be87-ed4e2576a9e9" />
+<img width="505" height="352" alt="obrazek" src="https://github.com/user-attachments/assets/581dcbbc-eac0-4c21-a615-11e12056c1f5" />
 
 *Figure 3. Geographical distribution of oncology clinical trials by country.*
 
@@ -184,6 +184,15 @@ Key observations:
 
 ---
 
+
+## 7. Validation
+
+In order to validate at least some outcomes of this exploratory study, the comparison with the published data was executed. Phesi’s annual “world’s most studied diseases” report, published 8 January 2026 and covering 2025, analyzed all recruiting clinical trials for all diseases, and breast cancer was the most studied disease for the fifth year running. This fiinding consistent with result of this study.
+
+https://www.manufacturingchemist.com/breast-cancer-world-s-most-studied-disease-phesi
+
+---
+
 ## 6. Limitations & Considerations
 
 Several methodological considerations should be taken into account when interpreting the results:
@@ -199,7 +208,9 @@ The results should be interpreted as an **exploratory overview** of registered o
 
 ---
 
-## 7. Conclusion
+
+
+## 8. Conclusion
 
 This Power BI project provides an exploratory overview of the global oncology clinical trial landscape.
 
